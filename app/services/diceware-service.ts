@@ -10,7 +10,7 @@ export class DicewareService extends BaseService {
 		super(http);
 	}
 
-	private dicewareUrl = "api/diceware/";
+	private dicewareUrl = "diceware.json";
 
 	getAllDiceware() : Observable<Diceware[]> {
 		return(this.http.get(this.dicewareUrl)
@@ -24,3 +24,4 @@ export class DicewareService extends BaseService {
 			.catch(this.handleError));
 	}
 }
+
